@@ -1,5 +1,6 @@
 from .models import *
 from rest_framework import serializers
+from drf_writable_nested import WritableNestedModelSerializer
 
 
 class LevelSerializer(serializers.ModelSerializer):
@@ -45,5 +46,5 @@ class AddedSerializer(serializers.WritableNestedModelSerializer):
         model = Added
         fields = [
             'id', 'beautyTitle', 'title', 'other_titles', 'connect', 'add_time',
-            'user', 'coord', 'level', 'activities_types', 'status', 'img'
+            'user', 'coord', 'level', 'activities_types', 'status', 'images'
         ]

@@ -90,6 +90,6 @@ class Added(models.Model):
 
 
 class Images(models.Model):
-    add = models.ForeignKey(Added, on_delete=models.CASCADE)
+    add = models.ForeignKey(Added, on_delete=models.CASCADE, related_name='images')
     title_img = models.CharField(max_length=100)
     data = models.URLField(blank=True)
