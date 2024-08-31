@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Level(models.Model):
@@ -81,7 +82,7 @@ class Added(models.Model):
     title = models.CharField(max_length=100)
     other_titles = models.CharField(max_length=100)
     connect = models.CharField(max_length=100)
-    add_time = models.DateTimeField(auto_now_add=True)
+    add_time = models.DateTimeField(default=timezone.now)
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
     coord = models.ForeignKey(Coords, on_delete=models.CASCADE)
     level = models.ForeignKey(Level, on_delete=models.CASCADE)

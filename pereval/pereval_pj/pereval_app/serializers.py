@@ -35,12 +35,12 @@ class ImagesSerializer(serializers.ModelSerializer):
         ]
 
 
-class AddedSerializer(serializers.WritableNestedModelSerializer):
-    add_time = serializers.DateTimeField()
+class AddedSerializer(WritableNestedModelSerializer):
+    add_time = serializers.DateTimeField(format='%Y-%m-%d %H:%M:%S')
     user = UsersSerializer()
-    coords = CoordsSerializer()
+    coord = CoordsSerializer()
     level = LevelSerializer()
-    images = ImagesSerializer()
+    images = ImagesSerializer(many=True)
 
     class Meta:
         model = Added
