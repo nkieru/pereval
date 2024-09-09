@@ -63,3 +63,22 @@ class AddedSerializer(WritableNestedModelSerializer):
             'id', 'beautyTitle', 'title', 'other_titles', 'connect', 'add_time',
             'user', 'coord', 'level', 'activities_types', 'status', 'images'
         ]
+
+    def validate(self, fields):
+        if self.instance is not None:
+            user = self.instance.user
+            user_fields = fields.get('user')
+            fields_changes = [
+                user.fam != user_fields['fam'],
+                user.name != user_fields['name'],
+                user.otc != user_fields['otc'],
+                user.phone != user_fields['phone'],
+                user.email != user_fields['email'],
+            ]
+            if user_fields is not None and any(fields_changes):
+                raise serializers.ValidationError(
+                    {
+                        'You cannot change user data'
+                    }
+                )
+        return fields
