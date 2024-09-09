@@ -18,6 +18,21 @@ class UsersSerializer(serializers.ModelSerializer):
             'email', 'phone', 'fam', 'name', 'otc'
         ]
 
+    def save(self, **kwargs):
+        self.is_valid()
+        user = Users.objects.filter(email=self.validated_data.get('email'))
+        if user.exists():
+            return user.first()
+        else:
+            user_create = Users.objects.create(
+                email=self.validated_data.get('email'),
+                phone=self.validated_data.get('phone'),
+                fam=self.validated_data.get('fam'),
+                name=self.validated_data.get('name'),
+                otc=self.validated_data.get('otc'),
+            )
+            return user_create
+
 
 class CoordsSerializer(serializers.ModelSerializer):
     class Meta:

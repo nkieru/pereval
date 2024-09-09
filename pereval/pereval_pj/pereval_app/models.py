@@ -26,7 +26,7 @@ class Level(models.Model):
 
 
 class Users(models.Model):
-    email = models.EmailField(max_length=50, unique=True)
+    email = models.EmailField(max_length=50)
     phone = models.CharField(max_length=15)
     fam = models.CharField(max_length=50)
     name = models.CharField(max_length=50)
