@@ -75,7 +75,7 @@ class Added(models.Model):
         (car, 'Автомобиль'),
         (bike, 'Мотоцикл'),
         (sail, 'Парус'),
-        (ride, 'верхом')
+        (ride, 'Верхом')
     ]
 
     beautyTitle = models.CharField(max_length=100)
