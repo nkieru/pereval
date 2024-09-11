@@ -20,6 +20,7 @@ from django.urls import path, include
 from rest_framework import routers
 from pereval_app import views
 
+from pereval_app.views import AddedFromEmailView
 
 router = routers.DefaultRouter()
 router.register(r'level', views.LevelViewSet)
@@ -32,4 +33,5 @@ router.register(r'added', views.AddedViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/submitData/', include(router.urls)),
+    path('api/submitData/user__email=<str:email>', AddedFromEmailView.as_view()),
 ]

@@ -1,5 +1,6 @@
 from rest_framework.response import Response
-from rest_framework import viewsets
+from django.http import JsonResponse
+from rest_framework import viewsets, generics
 from .serializers import *
 from .models import *
 
@@ -55,3 +56,15 @@ class AddedViewSet(viewsets.ModelViewSet):
                     'message': f'Changes rejected. Status: {added.get_status_display()}'
                 }
             )
+
+
+class AddedFromEmailView(generics.ListAPIView):
+    serializer_class = AddedSerializer
+
+    def get(self, request, *args, **kwargs):
+        email = kwargs.get('email', None)
+        if Added.objects.filter(user__email=email):
+            added_from_email = AddedSerializer(Added.objects.filter(user__email=email), many=True).data
+        else:
+            added_from_email = {'message': f'User with email {email} does not exist'}
+        return JsonResponse(added_from_email, safe=False)
