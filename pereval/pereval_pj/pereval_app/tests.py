@@ -63,6 +63,11 @@ class AddedApiTestCase(APITestCase):
         self.assertEqual(serializer_data, response.data)
         self.assertEqual(status.HTTP_200_OK, response.status_code)
 
+    def test_email_added(self):
+        url = reverse('user__email', args=(self.added_1.user.email,))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
 
 class AddedSerializerTestCase(TestCase):
     def setUp(self):

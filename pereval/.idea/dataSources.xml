@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/pereval_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name=".coverage" uuid="18aa27bd-37ca-4113-8043-bf956818ba09">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Nlieru\PycharmProjects\pereval\pereval_pj\.coverage</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

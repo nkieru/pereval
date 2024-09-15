@@ -33,5 +33,5 @@ router.register(r'added', views.AddedViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/submitData/', include(router.urls)),
-    path('api/submitData/user__email=<str:email>', AddedFromEmailView.as_view()),
+    path('api/submitData/user__email=<str:email>', AddedFromEmailView.as_view(), name='user__email'),
 ]
