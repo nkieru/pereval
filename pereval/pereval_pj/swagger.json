@@ -1,0 +1,982 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "API_pereval",
+        "version": "v1"
+    },
+    "basePath": "/api",
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "securityDefinitions": {
+        "basic": {
+            "type": "basic"
+        }
+    },
+    "security": [
+        {
+            "basic": []
+        }
+    ],
+    "paths": {
+        "/submitData/added/": {
+            "get": {
+                "operationId": "submitData_added_list",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "user__email",
+                        "in": "query",
+                        "description": "user__email",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Added"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "post": {
+                "operationId": "submitData_added_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Added"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Added"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": []
+        },
+        "/submitData/added/{id}/": {
+            "get": {
+                "operationId": "submitData_added_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Added"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "put": {
+                "operationId": "submitData_added_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Added"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Added"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "patch": {
+                "operationId": "submitData_added_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Added"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Added"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "delete": {
+                "operationId": "submitData_added_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this added.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/submitData/coords/": {
+            "get": {
+                "operationId": "submitData_coords_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Coords"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "post": {
+                "operationId": "submitData_coords_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Coords"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Coords"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": []
+        },
+        "/submitData/coords/{id}/": {
+            "get": {
+                "operationId": "submitData_coords_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Coords"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "put": {
+                "operationId": "submitData_coords_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Coords"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Coords"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "patch": {
+                "operationId": "submitData_coords_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Coords"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Coords"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "delete": {
+                "operationId": "submitData_coords_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this coords.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/submitData/images/": {
+            "get": {
+                "operationId": "submitData_images_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Images"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "post": {
+                "operationId": "submitData_images_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Images"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Images"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": []
+        },
+        "/submitData/images/{id}/": {
+            "get": {
+                "operationId": "submitData_images_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Images"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "put": {
+                "operationId": "submitData_images_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Images"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Images"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "patch": {
+                "operationId": "submitData_images_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Images"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Images"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "delete": {
+                "operationId": "submitData_images_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this images.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/submitData/level/": {
+            "get": {
+                "operationId": "submitData_level_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Level"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "post": {
+                "operationId": "submitData_level_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Level"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Level"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": []
+        },
+        "/submitData/level/{id}/": {
+            "get": {
+                "operationId": "submitData_level_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Level"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "put": {
+                "operationId": "submitData_level_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Level"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Level"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "patch": {
+                "operationId": "submitData_level_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Level"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Level"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "delete": {
+                "operationId": "submitData_level_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this level.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/submitData/user__email={email}": {
+            "get": {
+                "operationId": "submitData_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Added"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "email",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }
+            ]
+        },
+        "/submitData/users/": {
+            "get": {
+                "operationId": "submitData_users_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Users"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "post": {
+                "operationId": "submitData_users_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Users"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Users"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": []
+        },
+        "/submitData/users/{id}/": {
+            "get": {
+                "operationId": "submitData_users_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Users"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "put": {
+                "operationId": "submitData_users_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Users"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Users"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "patch": {
+                "operationId": "submitData_users_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Users"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Users"
+                        }
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "delete": {
+                "operationId": "submitData_users_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "submitData"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this users.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        }
+    },
+    "definitions": {
+        "Users": {
+            "required": [
+                "email",
+                "phone",
+                "fam",
+                "name",
+                "otc"
+            ],
+            "type": "object",
+            "properties": {
+                "email": {
+                    "title": "Email",
+                    "type": "string",
+                    "format": "email",
+                    "maxLength": 50,
+                    "minLength": 1
+                },
+                "phone": {
+                    "title": "Phone",
+                    "type": "string",
+                    "maxLength": 15,
+                    "minLength": 1
+                },
+                "fam": {
+                    "title": "Fam",
+                    "type": "string",
+                    "maxLength": 50,
+                    "minLength": 1
+                },
+                "name": {
+                    "title": "Name",
+                    "type": "string",
+                    "maxLength": 50,
+                    "minLength": 1
+                },
+                "otc": {
+                    "title": "Otc",
+                    "type": "string",
+                    "maxLength": 50,
+                    "minLength": 1
+                }
+            }
+        },
+        "Coords": {
+            "required": [
+                "latitude",
+                "longitude",
+                "height"
+            ],
+            "type": "object",
+            "properties": {
+                "latitude": {
+                    "title": "Latitude",
+                    "type": "number"
+                },
+                "longitude": {
+                    "title": "Longitude",
+                    "type": "number"
+                },
+                "height": {
+                    "title": "Height",
+                    "type": "integer",
+                    "maximum": 2147483647,
+                    "minimum": -2147483648
+                }
+            }
+        },
+        "Level": {
+            "type": "object",
+            "properties": {
+                "winter": {
+                    "title": "Winter",
+                    "type": "string",
+                    "enum": [
+                        "2À",
+                        "2Á",
+                        "3À",
+                        "3Á",
+                        "1À",
+                        "1Á"
+                    ]
+                },
+                "summer": {
+                    "title": "Summer",
+                    "type": "string",
+                    "enum": [
+                        "2À",
+                        "2Á",
+                        "3À",
+                        "3Á",
+                        "1À",
+                        "1Á"
+                    ]
+                },
+                "autumn": {
+                    "title": "Autumn",
+                    "type": "string",
+                    "enum": [
+                        "2À",
+                        "2Á",
+                        "3À",
+                        "3Á",
+                        "1À",
+                        "1Á"
+                    ]
+                },
+                "spring": {
+                    "title": "Spring",
+                    "type": "string",
+                    "enum": [
+                        "2À",
+                        "2Á",
+                        "3À",
+                        "3Á",
+                        "1À",
+                        "1Á"
+                    ]
+                }
+            }
+        },
+        "Images": {
+            "required": [
+                "title_img"
+            ],
+            "type": "object",
+            "properties": {
+                "title_img": {
+                    "title": "Title img",
+                    "type": "string",
+                    "maxLength": 100,
+                    "minLength": 1
+                },
+                "data": {
+                    "title": "Data",
+                    "type": "string",
+                    "format": "uri",
+                    "maxLength": 200
+                }
+            }
+        },
+        "Added": {
+            "required": [
+                "beautyTitle",
+                "title",
+                "other_titles",
+                "connect",
+                "add_time",
+                "user",
+                "coord",
+                "level",
+                "images"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "beautyTitle": {
+                    "title": "BeautyTitle",
+                    "type": "string",
+                    "maxLength": 100,
+                    "minLength": 1
+                },
+                "title": {
+                    "title": "Title",
+                    "type": "string",
+                    "maxLength": 100,
+                    "minLength": 1
+                },
+                "other_titles": {
+                    "title": "Other titles",
+                    "type": "string",
+                    "maxLength": 100,
+                    "minLength": 1
+                },
+                "connect": {
+                    "title": "Connect",
+                    "type": "string",
+                    "maxLength": 100,
+                    "minLength": 1
+                },
+                "add_time": {
+                    "title": "Add time",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "user": {
+                    "$ref": "#/definitions/Users"
+                },
+                "coord": {
+                    "$ref": "#/definitions/Coords"
+                },
+                "level": {
+                    "$ref": "#/definitions/Level"
+                },
+                "activities_types": {
+                    "title": "Activities types",
+                    "type": "string",
+                    "enum": [
+                        "01",
+                        "02",
+                        "03",
+                        "04",
+                        "05",
+                        "06",
+                        "07",
+                        "08",
+                        "09",
+                        "10",
+                        "11"
+                    ]
+                },
+                "status": {
+                    "title": "Status",
+                    "type": "string",
+                    "enum": [
+                        "N",
+                        "P",
+                        "A",
+                        "R"
+                    ]
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Images"
+                    }
+                }
+            }
+        }
+    }
+}
