@@ -27,9 +27,9 @@ from pereval_app.views import AddedFromEmailView
 
 
 router = routers.DefaultRouter()
-router.register(r'level', views.LevelViewSet)
-router.register(r'users', views.UsersViewSet)
-router.register(r'coords', views.CoordsViewSet)
+# router.register(r'level', views.LevelViewSet)
+# router.register(r'users', views.UsersViewSet)
+# router.register(r'coords', views.CoordsViewSet)
 router.register(r'images', views.ImagesViewSet)
 router.register(r'added', views.AddedViewSet)
 
