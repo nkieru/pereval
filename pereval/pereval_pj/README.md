@@ -146,5 +146,3 @@ pereval_pj\settings.py                                                       | 2
 pereval_pj\urls.py                                                           | 11 | 0 | 100% |
 pereval_pj\wsgi.py                                                           | 4  | 4 |   0% |
 TOTAL                                                                        | 275| 32|  88% |
-
-http://localhost:63342/models.py/pereval_pj/htmlcov/index.html?_ijt=srb49jalipqf91l0ipl6qsk3hf&_ij_reload=RELOAD_ON_SAVE
