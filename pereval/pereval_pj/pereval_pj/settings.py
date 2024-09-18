@@ -83,14 +83,21 @@ WSGI_APPLICATION = 'pereval_pj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'pereval_db',
+#         'USER': os.environ.get('FSTR_DB_LOGIN'),
+#         'PASSWORD': os.environ.get('FSTR_DB_PASS'),
+#         'HOST': os.environ.get('FSTR_DB_HOST'),
+#         'PORT': os.environ.get('FSTR_DB_PORT'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pereval_db',
-        'USER': os.environ.get('FSTR_DB_LOGIN'),
-        'PASSWORD': os.environ.get('FSTR_DB_PASS'),
-        'HOST': os.environ.get('FSTR_DB_HOST'),
-        'PORT': os.environ.get('FSTR_DB_PORT'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
