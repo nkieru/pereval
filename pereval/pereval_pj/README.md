@@ -120,7 +120,11 @@ message: 'Changes rejected. Status: (текущий статус объекта)
 Для получения всех объектов _added_, созданных пользователем с указанным адресом почты.
 
 ***
-Ссылка на swagger: http://127.0.0.1:8000/swagger/
+### _Опубликовано на pythonanywhere.com._  
+Ссылки:  
+https://apipereval.pythonanywhere.com/api/submitData/  
+https://apipereval.pythonanywhere.com/swagger/
+
 ***
 
 ### _Тесты:_
